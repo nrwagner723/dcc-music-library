@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SongMapper from './Components/SongMapper';
+import SearchBar from './Components/SearchBar';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div>
+      <SearchBar songs={songs}/>
       <table>
         <thead>
           <tr>
