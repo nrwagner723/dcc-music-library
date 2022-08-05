@@ -1,32 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function SearchBar ({songs}) {
-    
-    const [filteredSongs, setFilteredSongs] = useState([]);
-    
-    const handleFilter = (event) => {
-        const searchTerm = event.target.value;
-        const newFitler = songs.filter((value) => {
-            return value.title.toLowerCase().includes(searchTerm.toLowerCase());
-        });
-
-        if (searchTerm === '') {
-            setFilteredSongs([]);
-        } else {
-            setFilteredSongs(newFitler);
-    }}
-
+function SearchBar ({userInput, setUserInput, songs}) {
+  
     return ( 
         <div className='search'>
             <div className='searchInputs'>
-                <input type='text' placeholder='Search' onChange={handleFilter}/>
-            </div>
-            <div className='dataResults'>
-                {filteredSongs.map((value, key) => {
-                    return ( 
-                        <div> {value.title} </div> 
-                     );
-                })}
+                <input type='text' placeholder='Search' value={userInput} onChange={(e) => setUserInput(e.target.value)}/>
             </div>
         </div>
      );

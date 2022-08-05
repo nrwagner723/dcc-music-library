@@ -6,6 +6,7 @@ import SearchBar from './Components/SearchBar';
 function App() {
   
   const [songs, setSongs] = useState([]);
+  const [userInput, setUserInput] = useState('');
 
   useEffect(() => {
     getAllSongs();
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <SearchBar songs={songs}/>
+      <SearchBar userInput={userInput} setUserInput={setUserInput} />
       <table>
         <thead>
           <tr>
@@ -31,7 +32,7 @@ function App() {
             <th>Likes</th>
           </tr>
         </thead>
-       <SongMapper songs={songs}/>
+       <SongMapper userInput={userInput} songs={songs}/>
       </table>
     </div>
   );
