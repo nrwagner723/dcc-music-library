@@ -17,6 +17,28 @@ function App() {
 
   return (
     <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Artisit</th>
+            <th>Album</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+            <th>Likes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
