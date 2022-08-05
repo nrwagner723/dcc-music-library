@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import SongMapper from './Components/SongMapper';
 
 function App() {
   
@@ -28,16 +29,7 @@ function App() {
             <th>Likes</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
+       <SongMapper songs={songs}/>
       </table>
     </div>
   );
