@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SongMapper from './Components/SongMapper';
 import SearchBar from './Components/SearchBar';
+import './App.css';
 
 function App() {
   
   const [songs, setSongs] = useState([]);
   const [userInput, setUserInput] = useState('');
-  const [newSong, setNewSong] = useState('');
 
   useEffect(() => {
     getAllSongs();
@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <SearchBar userInput={userInput} setUserInput={setUserInput} />
-      <table>
+      <table class='table table-sm table-hover'>
         <thead>
           <tr>
             <th>Title</th>
@@ -30,7 +30,6 @@ function App() {
             <th>Album</th>
             <th>Release Date</th>
             <th>Genre</th>
-            <th>Likes</th>
           </tr>
         </thead>
        <SongMapper userInput={userInput} songs={songs}/>
