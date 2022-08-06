@@ -1,9 +1,10 @@
 import '../App.css';
 
 const NewSong = (userInput) => {
-    
+
     const axios = require('axios');
     axios.post('http://127.0.0.1:8000/music/', {
+        // i know this is all wrong, i just put it in as a placeholder because i dont know how to do this
         title: {userInput},
         artist: {userInput},
         album: {userInput},
