@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SongMapper from './Components/SongMapper';
 import SearchBar from './Components/SearchBar';
+import NewSong from './Components/NewSong';
 import './App.css';
 
 function App() {
@@ -21,8 +22,8 @@ function App() {
 
   return (
     <div>
-      <SearchBar userInput={userInput} setUserInput={setUserInput} />
-      <table class='table table-sm table-hover'>
+      <SearchBar userInput={userInput} setUserInput={setUserInput}/>
+      <table className='table table-sm table-hover'>
         <thead>
           <tr>
             <th>Title</th>
@@ -34,6 +35,7 @@ function App() {
         </thead>
        <SongMapper userInput={userInput} songs={songs}/>
       </table>
+      <NewSong userInput={userInput}/>
     </div>
   );
 }

@@ -7,3 +7,7 @@ table {
 .search-bar-font {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.form {
+    margin: 10px;
+}

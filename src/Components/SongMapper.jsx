@@ -9,7 +9,7 @@ const SongMapper = ({userInput, songs}) => {
           el.album.toLowerCase().includes(userInput.toLowerCase()) ||
           el.release_date.includes(userInput) ||
           el.genre.toLowerCase().includes(userInput.toLowerCase() 
-          )).map(el => <tr> <Song song = {el} /> </tr>)}
+          )).map(el => <tr> <Song song = {el}/> </tr>)}
         </tbody>
     )
 }
