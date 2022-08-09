@@ -20,6 +20,11 @@ function App() {
     setSongs(response.data);
   }
 
+  async function addNewSong(song){
+    let songs = [...userInput, song]
+    setUserInput(songs);
+  }
+
   return (
     <div>
       <SearchBar userInput={userInput} setUserInput={setUserInput}/>
@@ -35,7 +40,7 @@ function App() {
         </thead>
        <SongMapper userInput={userInput} songs={songs}/>
       </table>
-      <NewSong userInput={userInput}/>
+      <NewSong addNewSong={addNewSong}/>
     </div>
   );
 }
